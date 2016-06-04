@@ -25,6 +25,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HTb-e0-NKt">
                                             <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -191,7 +192,6 @@
         <!--Select PersonTVC-->
         <scene sceneID="yCB-te-xjp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YY9-he-Pd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="qy1-e8-eXN" customClass="SelectPersonTVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nad-Uo-sfu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -213,6 +213,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YY9-he-Pd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2595" y="935"/>
         </scene>

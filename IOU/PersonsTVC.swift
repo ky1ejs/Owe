@@ -36,6 +36,7 @@ class PersonsTVC: UITableViewController, MOCUser, NSFetchedResultsControllerDele
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let person = self.fetchController.fetchedObjects?[indexPath.row] as? Person
         cell.textLabel?.text = person?.name
+        cell.backgroundColor = person?.color
     }
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
