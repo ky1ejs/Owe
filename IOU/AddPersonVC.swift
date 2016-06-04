@@ -14,8 +14,8 @@ class AddPersonVC: UIViewController, MOCUser {
     
     @IBAction func save() {
         let entity = NSEntityDescription.entityForName("Person", inManagedObjectContext: self.moc)!
-        let person = NSManagedObject(entity: entity, insertIntoManagedObjectContext: self.moc)
-        person.setValue(self.nameTextField.text, forKey: "name")
+        let person = Person(entity: entity, insertIntoManagedObjectContext: self.moc)
+        person.name = self.nameTextField.text
         _ = try? self.moc.save()
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
