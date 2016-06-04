@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--PersonVC-->
+        <!--PersonTVC-->
         <scene sceneID="RLF-h1-wSi">
             <objects>
-                <tableViewController id="zvV-72-10T" customClass="PersonVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="zvV-72-10T" customClass="PersonTVC" customModule="IOU" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cTD-AY-UQ3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5e-zN-1ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="198"/>
+            <point key="canvasLocation" x="1852" y="-586"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ChL-rq-ZXl">
@@ -120,7 +120,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AB-Kg-xdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904" y="198"/>
+            <point key="canvasLocation" x="1040" y="-586"/>
         </scene>
     </scenes>
 </document>

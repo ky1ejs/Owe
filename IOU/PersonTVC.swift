@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class PersonVC: UITableViewController, MOCUser, NSFetchedResultsControllerDelegate {
+class PersonTVC: UITableViewController, MOCUser, NSFetchedResultsControllerDelegate {
     lazy var fetchController: NSFetchedResultsController = {
         let fetchRequest = NSFetchRequest(entityName: "Person")
         let sortDesc = NSSortDescriptor(key: "name", ascending: true)
