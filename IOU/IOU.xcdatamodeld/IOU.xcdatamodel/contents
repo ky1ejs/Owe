@@ -4,14 +4,14 @@
         <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="person" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="expenses" inverseEntity="Person" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="expenses" inverseEntity="Person" syncable="YES"/>
     </entity>
     <entity name="Person" representedClassName=".Person" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="person" inverseEntity="Expense" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Expense" positionX="90" positionY="-18" width="128" height="103"/>
+        <element name="Expense" positionX="90" positionY="-22" width="128" height="103"/>
         <element name="Person" positionX="-155" positionY="9" width="128" height="73"/>
     </elements>
 </model>

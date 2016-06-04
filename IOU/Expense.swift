@@ -14,5 +14,5 @@ class Expense: NSManagedObject {
     @NSManaged var amount: NSDecimalNumber?
     @NSManaged var desc: String?
     @NSManaged var title: String?
-    @NSManaged var person: NSSet?
+    @NSManaged var person: Person?
 }
