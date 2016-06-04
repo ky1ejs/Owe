@@ -28,6 +28,7 @@ class AddExpenseTVC: UITableViewController, MOCUser, SelectPersonTVCDelegate {
         expense.amount = NSDecimalNumber(string: amount)
         expense.person = person
         _ = try? self.moc.save()
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func cancel() {
