@@ -15,6 +15,7 @@ class PersonVC: UITableViewController, MOCUser, NSFetchedResultsControllerDelega
         let sortDesc = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDesc]
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.moc, sectionNameKeyPath: nil, cacheName: nil)
+        controller.delegate = self
         return controller
     }()
     
@@ -55,17 +56,20 @@ class PersonVC: UITableViewController, MOCUser, NSFetchedResultsControllerDelega
     }
     
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-        guard let newIndexPath = newIndexPath else { return }
-        guard let indexPath = indexPath else { return }
         switch type {
         case .Insert:
+            guard let newIndexPath = newIndexPath else { return }
             self.tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Automatic)
         case .Delete:
+            guard let indexPath = indexPath else { return }
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         case .Update:
+            guard let indexPath = indexPath else { return }
             guard let cell = self.tableView.cellForRowAtIndexPath(indexPath) else { return }
             self.configureCell(cell, atIndexPath: indexPath)
         case .Move:
+            guard let indexPath = indexPath else { return }
+            guard let newIndexPath = newIndexPath else { return }
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
             self.tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Automatic)
         }
