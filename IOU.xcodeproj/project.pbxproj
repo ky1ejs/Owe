@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		AF62F1FA1CFE8F1100A58AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62F1F91CFE8F1100A58AA2 /* AppDelegate.swift */; };
-		AF62F1FC1CFE8F1100A58AA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62F1FB1CFE8F1100A58AA2 /* ViewController.swift */; };
+		AF62F1FC1CFE8F1100A58AA2 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62F1FB1CFE8F1100A58AA2 /* PersonVC.swift */; };
 		AF62F1FF1CFE8F1100A58AA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF62F1FD1CFE8F1100A58AA2 /* Main.storyboard */; };
 		AF62F2021CFE8F1100A58AA2 /* IOU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF62F2001CFE8F1100A58AA2 /* IOU.xcdatamodeld */; };
 		AF62F2041CFE8F1100A58AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF62F2031CFE8F1100A58AA2 /* Assets.xcassets */; };
 		AF62F2071CFE8F1100A58AA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF62F2051CFE8F1100A58AA2 /* LaunchScreen.storyboard */; };
+		AF62F20F1CFE903B00A58AA2 /* MOCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62F20E1CFE903B00A58AA2 /* MOCUser.swift */; };
+		AF62F2111CFE994B00A58AA2 /* AddPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62F2101CFE994B00A58AA2 /* AddPersonVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF62F1F61CFE8F1100A58AA2 /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF62F1F91CFE8F1100A58AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF62F1FB1CFE8F1100A58AA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF62F1FB1CFE8F1100A58AA2 /* PersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVC.swift; sourceTree = "<group>"; };
 		AF62F1FE1CFE8F1100A58AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF62F2011CFE8F1100A58AA2 /* IOU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOU.xcdatamodel; sourceTree = "<group>"; };
 		AF62F2031CFE8F1100A58AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF62F2061CFE8F1100A58AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF62F2081CFE8F1100A58AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF62F20E1CFE903B00A58AA2 /* MOCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOCUser.swift; sourceTree = "<group>"; };
+		AF62F2101CFE994B00A58AA2 /* AddPersonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				AF62F1F91CFE8F1100A58AA2 /* AppDelegate.swift */,
-				AF62F1FB1CFE8F1100A58AA2 /* ViewController.swift */,
+				AF62F1FB1CFE8F1100A58AA2 /* PersonVC.swift */,
+				AF62F2101CFE994B00A58AA2 /* AddPersonVC.swift */,
+				AF62F20E1CFE903B00A58AA2 /* MOCUser.swift */,
 				AF62F1FD1CFE8F1100A58AA2 /* Main.storyboard */,
 				AF62F2031CFE8F1100A58AA2 /* Assets.xcassets */,
 				AF62F2051CFE8F1100A58AA2 /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF62F1FC1CFE8F1100A58AA2 /* ViewController.swift in Sources */,
+				AF62F2111CFE994B00A58AA2 /* AddPersonVC.swift in Sources */,
+				AF62F1FC1CFE8F1100A58AA2 /* PersonVC.swift in Sources */,
 				AF62F2021CFE8F1100A58AA2 /* IOU.xcdatamodeld in Sources */,
+				AF62F20F1CFE903B00A58AA2 /* MOCUser.swift in Sources */,
 				AF62F1FA1CFE8F1100A58AA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
