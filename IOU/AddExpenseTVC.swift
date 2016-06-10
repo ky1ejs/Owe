@@ -21,13 +21,13 @@ class AddExpenseTVC: UITableViewController, MOCUser, SelectPersonTVCDelegate {
         guard let description = self.descriptionTF.text where description.characters.count > 0 else { return }
         guard let amount = self.amountTF.text where amount.characters.count > 0 else { return }
         guard let person = self.person else { return }
-        let entity = NSEntityDescription.entityForName("Expense", inManagedObjectContext: self.moc)!
-        let expense = Expense(entity: entity, insertIntoManagedObjectContext: self.moc)
+        let entity = NSEntityDescription.entityForName("Expense", inManagedObjectContext: self.dynamicType.moc)!
+        let expense = Expense(entity: entity, insertIntoManagedObjectContext: self.dynamicType.moc)
         expense.title = title
         expense.desc = description
         expense.amount = NSDecimalNumber(string: amount)
         expense.person = person
-        _ = try? self.moc.save()
+        _ = try? self.dynamicType.moc.save()
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     

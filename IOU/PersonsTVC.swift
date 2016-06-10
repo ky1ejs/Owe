@@ -14,7 +14,7 @@ class PersonsTVC: UITableViewController, MOCUser, NSFetchedResultsControllerDele
         let fetchRequest = NSFetchRequest(entityName: "Person")
         let sortDesc = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDesc]
-        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.moc, sectionNameKeyPath: nil, cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.dynamicType.moc, sectionNameKeyPath: nil, cacheName: nil)
         controller.delegate = self
         return controller
     }()

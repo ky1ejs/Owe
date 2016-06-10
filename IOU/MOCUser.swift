@@ -13,7 +13,7 @@ import CoreData
 protocol MOCUser {}
 
 extension MOCUser {
-    var moc: NSManagedObjectContext {
+    static var moc: NSManagedObjectContext {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     }
 }

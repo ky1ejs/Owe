@@ -18,7 +18,7 @@ class SelectPersonTVC: UITableViewController, MOCUser {
         let fetch = NSFetchRequest(entityName: "Person")
         fetch.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         do {
-            let people = try self.moc.executeFetchRequest(fetch)
+            let people = try self.dynamicType.moc.executeFetchRequest(fetch)
             return people as? [Person] ?? [Person]()
         } catch {
             abort()
