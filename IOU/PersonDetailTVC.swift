@@ -11,8 +11,8 @@ import CoreData
 
 class PersonDetailTVC: UITableViewController, MOCUser {
     var person: Person!
-    var owe = [Owed]()
-    var owed = [Owed]()
+    var owe = [MoneyOwed]()
+    var owed = [MoneyOwed]()
     var expenses = [Expense]()
     
     override func viewDidLoad() {
@@ -23,8 +23,8 @@ class PersonDetailTVC: UITableViewController, MOCUser {
         }
         
         do {
-            try Owed.recalculate()
-            let owed = try Owed.forPerson(self.person)
+            try MoneyOwed.recalculate()
+            let owed = try MoneyOwed.forPerson(self.person)
             self.owe = owed.filter() { $0.amount > 0 }
             self.owed = owed.filter() { $0.amount < 0 }
         } catch {}

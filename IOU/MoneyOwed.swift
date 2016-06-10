@@ -1,5 +1,5 @@
 //
-//  OwedMoney.swift
+//  MoneyOwed.swift
 //  IOU
 //
 //  Created by Kyle McAlpine on 10/06/2016.
@@ -10,18 +10,18 @@ import UIKit
 import CoreData
 
 private var peopleIndexs = [Person : Int]()
-private var globalOwed = [[Owed?]]()
+private var globalOwed = [[MoneyOwed?]]()
 
 enum ErrorTing: ErrorType {
     case Error
 }
 
-struct Owed: MOCUser {
+struct MoneyOwed: MOCUser {
     let sender: Person
     let recipient: Person
     let amount: Double
     
-    static func forPerson(person: Person) throws -> [Owed] {
+    static func forPerson(person: Person) throws -> [MoneyOwed] {
         guard let index = peopleIndexs[person] else { throw ErrorTing.Error }
         return globalOwed[index].flatMap() { $0 }
     }
@@ -52,9 +52,9 @@ struct Owed: MOCUser {
         
         var owed = totals.map() { $0 - totalSpentEach }
         
-        var oweds = [[Owed?]]()
+        var owedMatrix = [[MoneyOwed?]]()
         for _ in expensesGroupedByPerson {
-            oweds.append(Array(count: expensesGroupedByPerson.count, repeatedValue: nil))
+            owedMatrix.append(Array(count: expensesGroupedByPerson.count, repeatedValue: nil))
         }
         
         for _ in 0..<expensesGroupedByPerson.count - 1 {
@@ -73,27 +73,27 @@ struct Owed: MOCUser {
             let smallestAmount = min(abs(minAmount), abs(maxAmount))
             let sender = people[senderIndex]
             let recipient = people[recipientIndex]
-            let send = Owed(sender: sender, recipient: recipient, amount: smallestAmount)
-            let receive = Owed(sender: recipient, recipient: sender, amount: smallestAmount * -1)
-            oweds[senderIndex][recipientIndex] = send
-            oweds[recipientIndex][senderIndex] = receive
+            let send = MoneyOwed(sender: sender, recipient: recipient, amount: smallestAmount)
+            let receive = MoneyOwed(sender: recipient, recipient: sender, amount: smallestAmount * -1)
+            owedMatrix[senderIndex][recipientIndex] = send
+            owedMatrix[recipientIndex][senderIndex] = receive
         }
         
-        globalOwed = oweds
+        globalOwed = owedMatrix
     }
 }
 
-extension Owed: Equatable {}
+extension MoneyOwed: Equatable {}
 
-func ==(lhs: Owed, rhs: Owed) -> Bool {
+func ==(lhs: MoneyOwed, rhs: MoneyOwed) -> Bool {
     return lhs.amount == rhs.amount
     && lhs.sender == rhs.sender
     && lhs.recipient == rhs.recipient
 }
 
 
-extension Owed: Comparable {}
-func <(lhs: Owed, rhs: Owed) -> Bool { return lhs.amount < rhs.amount }
-func <=(lhs: Owed, rhs: Owed) -> Bool { return lhs.amount <= rhs.amount }
-func >=(lhs: Owed, rhs: Owed) -> Bool { return lhs.amount >= rhs.amount }
-func >(lhs: Owed, rhs: Owed) -> Bool { return lhs.amount > rhs.amount }
+extension MoneyOwed: Comparable {}
+func <(lhs: MoneyOwed, rhs: MoneyOwed) -> Bool { return lhs.amount < rhs.amount }
+func <=(lhs: MoneyOwed, rhs: MoneyOwed) -> Bool { return lhs.amount <= rhs.amount }
+func >=(lhs: MoneyOwed, rhs: MoneyOwed) -> Bool { return lhs.amount >= rhs.amount }
+func >(lhs: MoneyOwed, rhs: MoneyOwed) -> Bool { return lhs.amount > rhs.amount }
