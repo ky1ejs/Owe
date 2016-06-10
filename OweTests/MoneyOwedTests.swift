@@ -16,7 +16,7 @@ class OweTests: XCTestCase {
         let person1 = Person(name: "Person 1")
         let person2 = Person(name: "Person 2")
         
-        _ = Expense(amount: 120, desc: "test expense", title: "Expense 1", person: person1)
+        _ = Expense(title: "Expense 1", desc: "Test expense", amount: 120, date: NSDate(), person: person1)
         
         do {
             try MoneyOwed.calculateForPeople([person1, person2])
@@ -34,7 +34,7 @@ class OweTests: XCTestCase {
         let person3 = Person(name: "3")
         let person4 = Person(name: "4")
         
-        _ = Expense(amount: 400, desc: "test", title: "test", person: person1)
+        _ = Expense(title: "Test", desc: nil, amount: 400, date: NSDate(), person: person1)
         
         do {
             try MoneyOwed.calculateForPeople([person1, person2, person3, person4])

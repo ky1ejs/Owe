@@ -13,15 +13,17 @@ class AddExpenseTVC: UITableViewController, MOCUser, SelectPersonTVCDelegate {
     @IBOutlet private weak var titleTF: UITextField!
     @IBOutlet private weak var descriptionTF: UITextField!
     @IBOutlet private weak var amountTF: UITextField!
+    @IBOutlet private weak var dateTF: UITextField!
     @IBOutlet private weak var personLabel: UILabel!
     private var person: Person?
+    private var date = NSDate()
     
     @IBAction func save() {
         guard let title = self.titleTF.text where title.characters.count > 0 else { return }
         guard let description = self.descriptionTF.text where description.characters.count > 0 else { return }
         guard let amount = self.amountTF.text where amount.characters.count > 0 else { return }
         guard let person = self.person else { return }
-        _ = Expense(amount: NSDecimalNumber(string: amount), desc: description, title: title, person: person)
+        _ = Expense(title: title, desc: description, amount: NSDecimalNumber(string: amount), date: self.date, person: person)
         _ = try? self.dynamicType.moc.save()
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }

@@ -10,18 +10,30 @@ import Foundation
 import CoreData
 
 
+
+
 class Expense: NSManagedObject, MOCUser {
     @NSManaged var title: String
     @NSManaged var desc: String?
     @NSManaged var amount: NSDecimalNumber
+    @NSManaged var dateString: String
+    var date: NSDate {
+        get {
+            return Timestamp.dateFromString(self.dateString)!
+        }
+        set {
+            self.dateString = Timestamp.stringFromDate(newValue)
+        }
+    }
     @NSManaged var person: Person
     
-    convenience init(amount: NSDecimalNumber, desc: String, title: String, person: Person) {
+    convenience init(title: String, desc: String?, amount: NSDecimalNumber, date: NSDate, person: Person) {
         let expenseEntity = NSEntityDescription.entityForName("Expense", inManagedObjectContext: self.dynamicType.moc)!
         self.init(entity: expenseEntity, insertIntoManagedObjectContext: self.dynamicType.moc)
-        self.amount = amount
-        self.desc = desc
         self.title = title
+        self.desc = desc
+        self.amount = amount
+        self.date = date
         self.person = person
     }
 }

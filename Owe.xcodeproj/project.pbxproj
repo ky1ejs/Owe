@@ -24,6 +24,7 @@
 		AFD04C521D02C2A20077CAB4 /* AddExpenseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD04C511D02C2A20077CAB4 /* AddExpenseTVC.swift */; };
 		AFD04C541D02C3060077CAB4 /* SelectPersonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD04C531D02C3060077CAB4 /* SelectPersonTVC.swift */; };
 		AFD4284F1D0AC8E500F4A210 /* MoneyOwedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4284E1D0AC8E500F4A210 /* MoneyOwedTests.swift */; };
+		AFD428571D0B444600F4A210 /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD428561D0B444600F4A210 /* Timestamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		AFD4284C1D0AC8E500F4A210 /* OweTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OweTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD4284E1D0AC8E500F4A210 /* MoneyOwedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyOwedTests.swift; sourceTree = "<group>"; };
 		AFD428501D0AC8E500F4A210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD428561D0B444600F4A210 /* Timestamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				AF62F20E1CFE903B00A58AA2 /* MOCUser.swift */,
 				AFD04C391D02B48F0077CAB4 /* Expense.swift */,
 				AFD04C3B1D02B48F0077CAB4 /* Person.swift */,
+				AFD428561D0B444600F4A210 /* Timestamp.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				AFD04C3D1D02B48F0077CAB4 /* Expense.swift in Sources */,
 				AFD04C541D02C3060077CAB4 /* SelectPersonTVC.swift in Sources */,
 				AFD04C4E1D02BEC00077CAB4 /* R.generated.swift in Sources */,
+				AFD428571D0B444600F4A210 /* Timestamp.swift in Sources */,
 				AF62F2111CFE994B00A58AA2 /* AddPersonVC.swift in Sources */,
 				AFD04C371D02ACB60077CAB4 /* PersonDetailTVC.swift in Sources */,
 				AF62F1FC1CFE8F1100A58AA2 /* PersonsTVC.swift in Sources */,

@@ -2,6 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
     <entity name="Expense" representedClassName=".Expense" syncable="YES">
         <attribute name="amount" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dateString" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="person" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="expenses" inverseEntity="Person" syncable="YES"/>
@@ -12,7 +13,7 @@
         <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" inverseName="person" inverseEntity="Expense" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Expense" positionX="90" positionY="-22" width="128" height="105"/>
+        <element name="Expense" positionX="90" positionY="-22" width="128" height="120"/>
         <element name="Person" positionX="-155" positionY="9" width="128" height="90"/>
     </elements>
 </model>
