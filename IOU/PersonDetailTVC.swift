@@ -48,7 +48,7 @@ class PersonDetailTVC: UITableViewController, MOCUser {
             cell.textLabel?.text = self.person.name
         case 1:
             let owedForRow = self.owed[indexPath.row]
-            cell.textLabel?.text = owedForRow.sender.name
+            cell.textLabel?.text = owedForRow.recipient.name
             cell.detailTextLabel?.text = String(owedForRow.amount)
         case 2:
             cell.textLabel?.text = self.expenses[indexPath.row].title
