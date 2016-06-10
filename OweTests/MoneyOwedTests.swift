@@ -10,22 +10,13 @@ import XCTest
 import CoreData
 @testable import Owe
 
-class OweTests: XCTestCase, MOCUser {
-    func testCalculations() {
-        let personEntity = NSEntityDescription.entityForName("Person", inManagedObjectContext: self.dynamicType.moc)!
+class OweTests: XCTestCase {
+    func testCalculationsWithTwoPeople() {
         
-        let person1 = Person(entity: personEntity, insertIntoManagedObjectContext: self.dynamicType.moc)
-        person1.name = "Person 1"
+        let person1 = Person(name: "Person 1")
+        let person2 = Person(name: "Person 2")
         
-        let person2 = Person(entity: personEntity, insertIntoManagedObjectContext: self.dynamicType.moc)
-        person2.name = "Person 2"
-        
-        let expenseEntity = NSEntityDescription.entityForName("Expense", inManagedObjectContext: self.dynamicType.moc)!
-        let expense = Expense(entity: expenseEntity, insertIntoManagedObjectContext: self.dynamicType.moc)
-        expense.person = person1
-        expense.title = "Expense 1"
-        expense.amount = 120
-        expense.desc = "test expense"
+        _ = Expense(amount: 120, desc: "test expense", title: "Expense 1", person: person1)
         
         do {
             try MoneyOwed.calculateForPeople([person1, person2])
@@ -35,5 +26,9 @@ class OweTests: XCTestCase, MOCUser {
             XCTAssertEqual(owed.first?.sender, person1)
             XCTAssertEqual(owed.first?.recipient, person2)
         } catch { XCTFail("Something threw") }
+    }
+    
+    func testCalculationsWith4People() {
+        
     }
 }

@@ -13,13 +13,7 @@ class AddPersonVC: UIViewController, MOCUser {
     @IBOutlet var nameTextField: UITextField!
     
     @IBAction func save() {
-        let entity = NSEntityDescription.entityForName("Person", inManagedObjectContext: self.dynamicType.moc)!
-        let person = Person(entity: entity, insertIntoManagedObjectContext: self.dynamicType.moc)
-        person.name = self.nameTextField.text
-        let r = CGFloat(arc4random_uniform(255)) / 255
-        let g = CGFloat(arc4random_uniform(255)) / 255
-        let b = CGFloat(arc4random_uniform(255)) / 255
-        person.color = UIColor(red: r, green: g, blue: b, alpha: 1)
+        _ = Person(name: self.nameTextField.text!)
         _ = try? self.dynamicType.moc.save()
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
