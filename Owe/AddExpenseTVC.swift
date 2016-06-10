@@ -16,7 +16,24 @@ class AddExpenseTVC: UITableViewController, MOCUser, SelectPersonTVCDelegate {
     @IBOutlet private weak var dateTF: UITextField!
     @IBOutlet private weak var personLabel: UILabel!
     private var person: Person?
-    private var date = NSDate()
+    private var date = NSDate() { didSet { if self.date != oldValue { self.updateDateTFTextWithDate(self.date) } } }
+    static var dateFormatter: NSDateFormatter = {
+       let df = NSDateFormatter()
+        df.dateFormat = "dd MM yyyy 'at' HH:mm"
+        return df
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        let dp = UIDatePicker()
+        dp.datePickerMode = .DateAndTime
+        dp.date = self.date
+        dp.addTarget(self, action: #selector(self.dynamicType.datePickerChanged(_:)), forControlEvents: .ValueChanged)
+        self.dateTF.inputView = dp
+        
+        self.updateDateTFTextWithDate(self.date)
+    }
     
     @IBAction func save() {
         guard let title = self.titleTF.text where title.characters.count > 0 else { return }
@@ -41,5 +58,14 @@ class AddExpenseTVC: UITableViewController, MOCUser, SelectPersonTVCDelegate {
         self.person = person
         self.personLabel.text = person.name
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func datePickerChanged(datePicker: UIDatePicker) {
+        self.date = datePicker.date
+        self.updateDateTFTextWithDate(self.date)
+    }
+        
+    func updateDateTFTextWithDate(date: NSDate) {
+        self.dateTF.text = self.dynamicType.dateFormatter.stringFromDate(date)
     }
 }
