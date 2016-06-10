@@ -48,6 +48,7 @@ class PersonDetailTVC: UITableViewController, MOCUser {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.basicCell)!
+        cell.backgroundColor = .whiteColor()
         switch indexPath.section {
         case 0:
             cell.textLabel?.text = self.person.name
@@ -58,6 +59,7 @@ class PersonDetailTVC: UITableViewController, MOCUser {
                 let owedForRow = arrayForRow[indexPath.row]
                 cell.textLabel?.text = owedForRow.recipient.name
                 cell.detailTextLabel?.text = String(abs(owedForRow.amount))
+                cell.backgroundColor = owedForRow.recipient.color
             } else {
                 cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.noneCell)!
             }
