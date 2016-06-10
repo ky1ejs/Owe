@@ -1,6 +1,6 @@
 //
 //  MoneyOwed.swift
-//  IOU
+//  Owe
 //
 //  Created by Kyle McAlpine on 10/06/2016.
 //  Copyright © 2016 Kyle McAlpine. All rights reserved.

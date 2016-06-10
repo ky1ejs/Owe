@@ -11,7 +11,7 @@
 		AF62F1FA1CFE8F1100A58AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62F1F91CFE8F1100A58AA2 /* AppDelegate.swift */; };
 		AF62F1FC1CFE8F1100A58AA2 /* PersonsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62F1FB1CFE8F1100A58AA2 /* PersonsTVC.swift */; };
 		AF62F1FF1CFE8F1100A58AA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF62F1FD1CFE8F1100A58AA2 /* Main.storyboard */; };
-		AF62F2021CFE8F1100A58AA2 /* IOU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF62F2001CFE8F1100A58AA2 /* IOU.xcdatamodeld */; };
+		AF62F2021CFE8F1100A58AA2 /* Owe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF62F2001CFE8F1100A58AA2 /* Owe.xcdatamodeld */; };
 		AF62F2041CFE8F1100A58AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF62F2031CFE8F1100A58AA2 /* Assets.xcassets */; };
 		AF62F2071CFE8F1100A58AA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF62F2051CFE8F1100A58AA2 /* LaunchScreen.storyboard */; };
 		AF62F20F1CFE903B00A58AA2 /* MOCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF62F20E1CFE903B00A58AA2 /* MOCUser.swift */; };
@@ -27,11 +27,11 @@
 
 /* Begin PBXFileReference section */
 		AF3F93311D0A5431007D5FF0 /* MoneyOwed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyOwed.swift; sourceTree = "<group>"; };
-		AF62F1F61CFE8F1100A58AA2 /* IOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF62F1F61CFE8F1100A58AA2 /* Owe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Owe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF62F1F91CFE8F1100A58AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF62F1FB1CFE8F1100A58AA2 /* PersonsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTVC.swift; sourceTree = "<group>"; };
 		AF62F1FE1CFE8F1100A58AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF62F2011CFE8F1100A58AA2 /* IOU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOU.xcdatamodel; sourceTree = "<group>"; };
+		AF62F2011CFE8F1100A58AA2 /* Owe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Owe.xcdatamodel; sourceTree = "<group>"; };
 		AF62F2031CFE8F1100A58AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF62F2061CFE8F1100A58AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF62F2081CFE8F1100A58AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		AF62F1ED1CFE8F1100A58AA2 = {
 			isa = PBXGroup;
 			children = (
-				AF62F1F81CFE8F1100A58AA2 /* IOU */,
+				AF62F1F81CFE8F1100A58AA2 /* Owe */,
 				AFD04C4A1D02BE000077CAB4 /* Fameworks */,
 				AF62F1F71CFE8F1100A58AA2 /* Products */,
 			);
@@ -70,12 +70,12 @@
 		AF62F1F71CFE8F1100A58AA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF62F1F61CFE8F1100A58AA2 /* IOU.app */,
+				AF62F1F61CFE8F1100A58AA2 /* Owe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF62F1F81CFE8F1100A58AA2 /* IOU */ = {
+		AF62F1F81CFE8F1100A58AA2 /* Owe */ = {
 			isa = PBXGroup;
 			children = (
 				AF62F1F91CFE8F1100A58AA2 /* AppDelegate.swift */,
@@ -90,7 +90,7 @@
 				AFD04C501D02BFBE0077CAB4 /* Core Data */,
 				AFD04C4F1D02BECD0077CAB4 /* Supporting Files */,
 			);
-			path = IOU;
+			path = Owe;
 			sourceTree = "<group>";
 		};
 		AFD04C4A1D02BE000077CAB4 /* Fameworks */ = {
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				AF62F20E1CFE903B00A58AA2 /* MOCUser.swift */,
-				AF62F2001CFE8F1100A58AA2 /* IOU.xcdatamodeld */,
+				AF62F2001CFE8F1100A58AA2 /* Owe.xcdatamodeld */,
 				AFD04C391D02B48F0077CAB4 /* Expense.swift */,
 				AFD04C3B1D02B48F0077CAB4 /* Person.swift */,
 			);
@@ -133,9 +133,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF62F1F51CFE8F1100A58AA2 /* IOU */ = {
+		AF62F1F51CFE8F1100A58AA2 /* Owe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF62F20B1CFE8F1100A58AA2 /* Build configuration list for PBXNativeTarget "IOU" */;
+			buildConfigurationList = AF62F20B1CFE8F1100A58AA2 /* Build configuration list for PBXNativeTarget "Owe" */;
 			buildPhases = (
 				AFD04C4B1D02BE320077CAB4 /* R.swift */,
 				AF62F1F21CFE8F1100A58AA2 /* Sources */,
@@ -147,9 +147,9 @@
 			);
 			dependencies = (
 			);
-			name = IOU;
+			name = Owe;
 			productName = IOU;
-			productReference = AF62F1F61CFE8F1100A58AA2 /* IOU.app */;
+			productReference = AF62F1F61CFE8F1100A58AA2 /* Owe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AF62F1F11CFE8F1100A58AA2 /* Build configuration list for PBXProject "IOU" */;
+			buildConfigurationList = AF62F1F11CFE8F1100A58AA2 /* Build configuration list for PBXProject "Owe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -181,7 +181,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF62F1F51CFE8F1100A58AA2 /* IOU */,
+				AF62F1F51CFE8F1100A58AA2 /* Owe */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +212,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT/rswift\" \"$SRCROOT/IOU\"";
+			shellScript = "\"$SRCROOT/rswift\" \"$SRCROOT/Owe\"";
 		};
 		AFD04C4C1D02BE490077CAB4 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -244,7 +244,7 @@
 				AF62F2111CFE994B00A58AA2 /* AddPersonVC.swift in Sources */,
 				AFD04C371D02ACB60077CAB4 /* PersonDetailTVC.swift in Sources */,
 				AF62F1FC1CFE8F1100A58AA2 /* PersonsTVC.swift in Sources */,
-				AF62F2021CFE8F1100A58AA2 /* IOU.xcdatamodeld in Sources */,
+				AF62F2021CFE8F1100A58AA2 /* Owe.xcdatamodeld in Sources */,
 				AFD04C521D02C2A20077CAB4 /* AddExpenseTVC.swift in Sources */,
 				AF62F20F1CFE903B00A58AA2 /* MOCUser.swift in Sources */,
 				AF62F1FA1CFE8F1100A58AA2 /* AppDelegate.swift in Sources */,
@@ -364,10 +364,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = IOU/Info.plist;
+				INFOPLIST_FILE = Owe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.kylejm.IOU;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.kylejm.Owe;
+				PRODUCT_NAME = Owe;
 			};
 			name = Debug;
 		};
@@ -379,17 +379,17 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = IOU/Info.plist;
+				INFOPLIST_FILE = Owe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.kylejm.IOU;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.kylejm.Owe;
+				PRODUCT_NAME = Owe;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF62F1F11CFE8F1100A58AA2 /* Build configuration list for PBXProject "IOU" */ = {
+		AF62F1F11CFE8F1100A58AA2 /* Build configuration list for PBXProject "Owe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF62F2091CFE8F1100A58AA2 /* Debug */,
@@ -398,7 +398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF62F20B1CFE8F1100A58AA2 /* Build configuration list for PBXNativeTarget "IOU" */ = {
+		AF62F20B1CFE8F1100A58AA2 /* Build configuration list for PBXNativeTarget "Owe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF62F20C1CFE8F1100A58AA2 /* Debug */,
@@ -410,13 +410,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AF62F2001CFE8F1100A58AA2 /* IOU.xcdatamodeld */ = {
+		AF62F2001CFE8F1100A58AA2 /* Owe.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AF62F2011CFE8F1100A58AA2 /* IOU.xcdatamodel */,
+				AF62F2011CFE8F1100A58AA2 /* Owe.xcdatamodel */,
 			);
-			currentVersion = AF62F2011CFE8F1100A58AA2 /* IOU.xcdatamodel */;
-			path = IOU.xcdatamodeld;
+			currentVersion = AF62F2011CFE8F1100A58AA2 /* Owe.xcdatamodel */;
+			path = Owe.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
