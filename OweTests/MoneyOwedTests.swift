@@ -12,7 +12,6 @@ import CoreData
 
 class OweTests: XCTestCase {
     func testCalculationsWithTwoPeople() {
-        
         let person1 = Person(name: "Person 1")
         let person2 = Person(name: "Person 2")
         
