@@ -29,6 +29,10 @@ struct MoneyOwed: MOCUser {
     static func recalculate() throws {
         let personFetch = NSFetchRequest(entityName: "Person")
         guard let people = try self.moc.executeFetchRequest(personFetch) as? [Person] else { return }
+        try self.calculateForPeople(people)
+    }
+    
+    static func calculateForPeople(people: [Person]) throws {
         for i in 0..<people.count { peopleIndexs[people[i]] = i }
         
         var expensesGroupedByPerson = [[Expense]]()

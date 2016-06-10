@@ -23,7 +23,18 @@
 		AFD04C4E1D02BEC00077CAB4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD04C4D1D02BEC00077CAB4 /* R.generated.swift */; };
 		AFD04C521D02C2A20077CAB4 /* AddExpenseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD04C511D02C2A20077CAB4 /* AddExpenseTVC.swift */; };
 		AFD04C541D02C3060077CAB4 /* SelectPersonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD04C531D02C3060077CAB4 /* SelectPersonTVC.swift */; };
+		AFD4284F1D0AC8E500F4A210 /* MoneyOwedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD4284E1D0AC8E500F4A210 /* MoneyOwedTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFD428511D0AC8E500F4A210 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF62F1EE1CFE8F1100A58AA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF62F1F51CFE8F1100A58AA2;
+			remoteInfo = Owe;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF3F93311D0A5431007D5FF0 /* MoneyOwed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyOwed.swift; sourceTree = "<group>"; };
@@ -44,6 +55,9 @@
 		AFD04C4D1D02BEC00077CAB4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		AFD04C511D02C2A20077CAB4 /* AddExpenseTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExpenseTVC.swift; sourceTree = "<group>"; };
 		AFD04C531D02C3060077CAB4 /* SelectPersonTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPersonTVC.swift; sourceTree = "<group>"; };
+		AFD4284C1D0AC8E500F4A210 /* OweTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OweTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD4284E1D0AC8E500F4A210 /* MoneyOwedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyOwedTests.swift; sourceTree = "<group>"; };
+		AFD428501D0AC8E500F4A210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFD428491D0AC8E500F4A210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +84,7 @@
 			children = (
 				AF62F1F81CFE8F1100A58AA2 /* Owe */,
 				AFD04C4A1D02BE000077CAB4 /* Fameworks */,
+				AFD4284D1D0AC8E500F4A210 /* OweTests */,
 				AF62F1F71CFE8F1100A58AA2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				AF62F1F61CFE8F1100A58AA2 /* Owe.app */,
+				AFD4284C1D0AC8E500F4A210 /* OweTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +153,15 @@
 			name = "Adding Expense";
 			sourceTree = "<group>";
 		};
+		AFD4284D1D0AC8E500F4A210 /* OweTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFD4284E1D0AC8E500F4A210 /* MoneyOwedTests.swift */,
+				AFD428501D0AC8E500F4A210 /* Info.plist */,
+			);
+			path = OweTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +184,24 @@
 			productReference = AF62F1F61CFE8F1100A58AA2 /* Owe.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AFD4284B1D0AC8E500F4A210 /* OweTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD428551D0AC8E500F4A210 /* Build configuration list for PBXNativeTarget "OweTests" */;
+			buildPhases = (
+				AFD428481D0AC8E500F4A210 /* Sources */,
+				AFD428491D0AC8E500F4A210 /* Frameworks */,
+				AFD4284A1D0AC8E500F4A210 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFD428521D0AC8E500F4A210 /* PBXTargetDependency */,
+			);
+			name = OweTests;
+			productName = OweTests;
+			productReference = AFD4284C1D0AC8E500F4A210 /* OweTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +215,11 @@
 					AF62F1F51CFE8F1100A58AA2 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = X2TBSUCASC;
+					};
+					AFD4284B1D0AC8E500F4A210 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X2TBSUCASC;
+						TestTargetID = AF62F1F51CFE8F1100A58AA2;
 					};
 				};
 			};
@@ -182,6 +237,7 @@
 			projectRoot = "";
 			targets = (
 				AF62F1F51CFE8F1100A58AA2 /* Owe */,
+				AFD4284B1D0AC8E500F4A210 /* OweTests */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +250,13 @@
 				AF62F2071CFE8F1100A58AA2 /* LaunchScreen.storyboard in Resources */,
 				AF62F2041CFE8F1100A58AA2 /* Assets.xcassets in Resources */,
 				AF62F1FF1CFE8F1100A58AA2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD4284A1D0AC8E500F4A210 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +314,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFD428481D0AC8E500F4A210 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD4284F1D0AC8E500F4A210 /* MoneyOwedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFD428521D0AC8E500F4A210 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF62F1F51CFE8F1100A58AA2 /* Owe */;
+			targetProxy = AFD428511D0AC8E500F4A210 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF62F1FD1CFE8F1100A58AA2 /* Main.storyboard */ = {
@@ -386,6 +465,30 @@
 			};
 			name = Release;
 		};
+		AFD428531D0AC8E500F4A210 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OweTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.kylejm.OweTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Owe.app/Owe";
+			};
+			name = Debug;
+		};
+		AFD428541D0AC8E500F4A210 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OweTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.kylejm.OweTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Owe.app/Owe";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -406,6 +509,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AFD428551D0AC8E500F4A210 /* Build configuration list for PBXNativeTarget "OweTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD428531D0AC8E500F4A210 /* Debug */,
+				AFD428541D0AC8E500F4A210 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
