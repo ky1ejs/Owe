@@ -45,7 +45,7 @@ struct MoneyOwed: MOCUser {
         for personsExpenses in expensesGroupedByPerson {
             var total: Double = 0
             for expense in personsExpenses {
-                total += expense.amount?.doubleValue ?? 0
+                total += expense.amount.doubleValue
             }
             totals.append(total)
         }

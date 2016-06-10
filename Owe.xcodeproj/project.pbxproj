@@ -136,8 +136,8 @@
 		AFD04C501D02BFBE0077CAB4 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				AF62F20E1CFE903B00A58AA2 /* MOCUser.swift */,
 				AF62F2001CFE8F1100A58AA2 /* Owe.xcdatamodeld */,
+				AF62F20E1CFE903B00A58AA2 /* MOCUser.swift */,
 				AFD04C391D02B48F0077CAB4 /* Expense.swift */,
 				AFD04C3B1D02B48F0077CAB4 /* Person.swift */,
 			);

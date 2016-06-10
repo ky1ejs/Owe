@@ -11,10 +11,10 @@ import CoreData
 
 
 class Expense: NSManagedObject, MOCUser {
-    @NSManaged var amount: NSDecimalNumber?
+    @NSManaged var title: String
     @NSManaged var desc: String?
-    @NSManaged var title: String?
-    @NSManaged var person: Person?
+    @NSManaged var amount: NSDecimalNumber
+    @NSManaged var person: Person
     
     convenience init(amount: NSDecimalNumber, desc: String, title: String, person: Person) {
         let expenseEntity = NSEntityDescription.entityForName("Expense", inManagedObjectContext: self.dynamicType.moc)!

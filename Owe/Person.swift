@@ -11,19 +11,14 @@ import CoreData
 
 
 class Person: NSManagedObject, MOCUser {
-    @NSManaged var name: String?
+    @NSManaged var name: String
     @NSManaged var expenses: NSSet?
-    @NSManaged var colorData: NSData?
-    var color: UIColor? {
+    @NSManaged var colorData: NSData
+    var color: UIColor {
         get {
-            guard let colorData = self.colorData else { return nil }
-            return NSKeyedUnarchiver.unarchiveObjectWithData(colorData) as? UIColor
+            return NSKeyedUnarchiver.unarchiveObjectWithData(self.colorData) as! UIColor
         }
         set {
-            guard let newValue = newValue else {
-                self.colorData = nil
-                return
-            }
             let colorData = NSKeyedArchiver.archivedDataWithRootObject(newValue)
             self.colorData = colorData
         }

@@ -63,7 +63,7 @@ class PersonDetailTVC: UITableViewController, MOCUser {
             if self.expenses.count > 0 {
                 let expenseForRow = self.expenses[indexPath.row]
                 cell.textLabel?.text = expenseForRow.title
-                cell.detailTextLabel?.text = String(expenseForRow.amount!)
+                cell.detailTextLabel?.text = String(expenseForRow.amount)
             } else {
                 cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.noneCell)!
             }
