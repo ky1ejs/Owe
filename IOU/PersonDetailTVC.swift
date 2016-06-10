@@ -11,6 +11,7 @@ import CoreData
 
 class PersonDetailTVC: UITableViewController, MOCUser {
     var person: Person!
+    var owe = [Owed]()
     var owed = [Owed]()
     var expenses = [Expense]()
     
@@ -21,22 +22,24 @@ class PersonDetailTVC: UITableViewController, MOCUser {
             self.expenses = expenses
         }
         
-        
         do {
             try Owed.recalculate()
-            self.owed = try Owed.forPerson(self.person)
+            let owed = try Owed.forPerson(self.person)
+            self.owe = owed.filter() { $0.amount > 0 }
+            self.owed = owed.filter() { $0.amount < 0 }
         } catch {}
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:     return 1
-        case 1:     return self.owed.count
-        case 2:     return self.expenses.count
+        case 1:     return self.owe.count
+        case 2:     return self.owed.count
+        case 3:     return self.expenses.count
         default:    return 0
         }
     }
@@ -46,15 +49,27 @@ class PersonDetailTVC: UITableViewController, MOCUser {
         switch indexPath.section {
         case 0:
             cell.textLabel?.text = self.person.name
-        case 1:
-            let owedForRow = self.owed[indexPath.row]
+        case 1, 2:
+            let arrayForRow = indexPath.section == 1 ? self.owe : self.owed
+            let owedForRow = arrayForRow[indexPath.row]
             cell.textLabel?.text = owedForRow.recipient.name
-            cell.detailTextLabel?.text = String(owedForRow.amount)
-        case 2:
-            cell.textLabel?.text = self.expenses[indexPath.row].title
+            cell.detailTextLabel?.text = String(abs(owedForRow.amount))
+        case 3:
+            let expenseForRow = self.expenses[indexPath.row]
+            cell.textLabel?.text = expenseForRow.title
+            cell.detailTextLabel?.text = String(expenseForRow.amount!)
         default:
             break
         }
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 1:     return "Need to send"
+        case 2:     return "To be received"
+        case 3:     return "Expenses"
+        default:    return nil
+        }
     }
 }
