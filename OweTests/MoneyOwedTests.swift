@@ -40,7 +40,9 @@ class OweTests: XCTestCase {
             try MoneyOwed.calculateForPeople([person1, person2, person3, person4])
             let owed = try MoneyOwed.forPerson(person1)
             XCTAssertEqual(owed.count, 3)
-            XCTAssertEqual(owed.first?.amount, -100)
+            for owe in owed {
+                XCTAssertEqual(owe.amount, -100)
+            }
         } catch { XCTFail("Something threw") }
     }
 }
