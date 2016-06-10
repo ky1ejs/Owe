@@ -33,15 +33,14 @@ class PersonDetailTVC: UITableViewController, MOCUser {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0:     return 1
-        case 1:     return self.owe.count > 0 ? self.owe.count : 1
-        case 2:     return self.owed.count > 0 ? self.owed.count : 1
-        case 3:     return self.expenses.count > 0 ? self.expenses.count : 1
+        case 0:     return self.owe.count > 0 ? self.owe.count : 1
+        case 1:     return self.owed.count > 0 ? self.owed.count : 1
+        case 2:     return self.expenses.count > 0 ? self.expenses.count : 1
         default:    return 0
         }
     }
@@ -50,10 +49,7 @@ class PersonDetailTVC: UITableViewController, MOCUser {
         var cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.basicCell)!
         cell.backgroundColor = .whiteColor()
         switch indexPath.section {
-        case 0:
-            cell.textLabel?.text = self.person.name
-            cell.detailTextLabel?.text = nil
-        case 1, 2:
+        case 0, 1:
             let arrayForRow = indexPath.section == 1 ? self.owe : self.owed
             if arrayForRow.count > 0 {
                 let owedForRow = arrayForRow[indexPath.row]
@@ -63,7 +59,7 @@ class PersonDetailTVC: UITableViewController, MOCUser {
             } else {
                 cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.noneCell)!
             }
-        case 3:
+        case 2:
             if self.expenses.count > 0 {
                 let expenseForRow = self.expenses[indexPath.row]
                 cell.textLabel?.text = expenseForRow.title
@@ -79,9 +75,9 @@ class PersonDetailTVC: UITableViewController, MOCUser {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 1:     return "Need to send"
-        case 2:     return "To be received"
-        case 3:     return "Expenses"
+        case 0:     return "Need to send"
+        case 1:     return "To be received"
+        case 2:     return "Expenses"
         default:    return nil
         }
     }
