@@ -50,7 +50,7 @@ class PersonDetailTVC: UITableViewController, MOCUser {
         cell.backgroundColor = .whiteColor()
         switch indexPath.section {
         case 0, 1:
-            let arrayForRow = indexPath.section == 1 ? self.owe : self.owed
+            let arrayForRow = indexPath.section == 0 ? self.owe : self.owed
             if arrayForRow.count > 0 {
                 let owedForRow = arrayForRow[indexPath.row]
                 cell.textLabel?.text = owedForRow.recipient.name
